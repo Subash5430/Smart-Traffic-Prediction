@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Traffic & Accident Prediction</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+    }
+    .card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      width: 420px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+    h2 { text-align: center; }
+    label { font-weight: bold; margin-top: 10px; display: block; }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 16px;
+      background: #203a43;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 6px;
+      display: none;
+      text-align: center;
+      font-weight: bold;
+    }
+    .high { background: #ffd6d6; color: #b00020; }
+    .low { background: #d6f5e3; color: #006b3c; }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h2>Traffic Accident Prediction</h2>
+
+    <label>City</label>
+    <input id="city" placeholder="Bangalore" />
+
+    <label>Latitude</label>
+    <input id="lat" placeholder="12.9716" />
+
+    <label>Longitude</label>
+    <input id="lon" placeholder="77.5946" />
+
+    <label>Hour (0–23)</label>
+    <input id="hour" placeholder="9" />
+
+    <label>Day (1–7)</label>
+    <input id="day" placeholder="2" />
+
+    <label>Traffic Volume</label>
+    <input id="traffic" placeholder="800" />
+
+    <button onclick="predict()">Predict Risk</button>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
